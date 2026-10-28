@@ -3,71 +3,1152 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio of Priya Kumari - Second-year B.Tech student at SVIET, Chandigarh, and aspiring Full-Stack Developer learning modern web technologies.">
+        <meta name="theme-color" content="#f8fafc">
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c90018'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='sans-serif' font-weight='800' font-size='18' fill='%23ffffff'%3EP%3C/text%3E%3C/svg%3E">
+
+        <!-- Google Fonts Preconnect & Stylesheet -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Devicon for Crisp Official Tech Badges -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
         <link rel="stylesheet" href="assets/css/styles.css">
-        <title>Landing page responsive portfolio</title>
+        <title>Priya Kumari | Aspiring Full-Stack Developer | B.Tech Student</title>
     </head>
     <body>
-        <!-- OVERLAY -->
+        <!-- CUSTOM THEME CURSOR (#c90018) -->
+        <div class="custom-cursor cursor--hidden" id="custom-cursor" aria-hidden="true">
+            <div class="cursor__dot" id="cursor-dot"></div>
+            <div class="cursor__ring" id="cursor-ring"></div>
+        </div>
+
+        <!-- OVERLAY CURTAIN -->
         <div class="overlay first"></div>
         <div class="overlay second"></div>
         <div class="overlay third"></div>
 
         <!-- HEADER -->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Bedimcode</a>
-                </div>
+        <header class="l-header" id="header">
+            <div class="header__container bd-grid">
+                <!-- Floating Center Pill Navbar -->
+                <nav class="nav__pill" id="nav-pill">
+                    <a href="#home" class="nav__pill-logo" aria-label="Priya Kumari Home">
+                        <span class="nav__code-tag">&lt;/&gt;</span>
+                    </a>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        </ul>
+                    </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <ion-icon name="menu"></ion-icon>
-                </div>
-            </nav>
+                    <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
+                </nav>
+
+                <!-- Floating Let's Connect Button -->
+                <a href="#contact" class="nav__connect-btn" aria-label="Let's Connect">
+                    <span class="connect-btn__dot"></span>
+                    <span>Let's Connect</span>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+            </div>
         </header>
 
         <!-- MAIN -->
-        <main class="l-main bd-grid">
-            <div class="home">
-                <div class="home__information">
-                    <span class="home__pressent anime-text">Hello, My name is</span>
-                    <h1 class="home__title anime-text">John Doe</h1>
-                    <span class="home__skill anime-text">Web Developer</span>
-                    
-                    <div>
-                        <a href="#" class="home__button anime-text">DOWNLOAD CV</a>
+        <main class="l-main">
+            <!-- ===== HOME / HERO SECTION ===== -->
+            <section class="home" id="home">
+                <!-- Cyber Background Ambience -->
+                <div class="cyber__dots-top-left" aria-hidden="true"></div>
+                <div class="cyber__dots-right" aria-hidden="true"></div>
+                <span class="cyber__plus cyber__plus-1" aria-hidden="true">+</span>
+                <span class="cyber__plus cyber__plus-2" aria-hidden="true">+</span>
+                <span class="cyber__plus cyber__plus-3" aria-hidden="true">+</span>
+
+                <!-- Section Topbar Indicator -->
+                <!-- <div class="section__topbar" style="margin-bottom: 2rem;">
+                    <div class="section__topbar-left">
+                        <span class="section__topbar-num">/ 01 /</span>
+                        <span class="section__topbar-name">HOME</span>
+                        <span class="section__topbar-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="section__topbar-right">
+                        <span class="section__topbar-slogan">TURNING IDEAS INTO REALITY</span>
+                        <span class="accent-slashes" aria-hidden="true">///</span>
+                    </div>
+                </div> -->
+
+                <div class="home__container bd-grid">
+                    <!-- Left Column: Introduction & CTAs -->
+                    <div class="home__information">
+                        <div class="home__greeting-wrap">
+                            <span class="home__greeting">Hi, I'm</span>
+                            <span class="home__greeting-pill"></span>
+                        </div>
+
+                        <h1 class="home__title">
+                            <span class="home__title-first">Priya</span>
+                            <span class="home__title-last">Kumari</span>
+                        </h1>
+
+                        <div class="home__subtitle-box">
+                            <p class="home__student-tag">B.Tech Student @ SVIET, Chandigarh</p>
+                            <p class="home__description">
+                                Building modern web interfaces, learning <span class="text-highlight">JavaScript</span>, and exploring creative designs.
+                            </p>
+                        </div>
+
+                        <!-- Skill Badges Row -->
+                        <div class="home__badges-row">
+                            <span class="skill__badge">
+                                <span class="skill__badge-icon">🌐</span> Web Development
+                            </span>
+                            <span class="skill__badge">
+                                <span class="skill__badge-icon">⚡</span> HTML5 &amp; CSS3
+                            </span>
+                            <span class="skill__badge">
+                                <span class="skill__badge-icon">💻</span> JavaScript (Learning)
+                            </span>
+                            <span class="skill__badge">
+                                <span class="skill__badge-icon">🎨</span> UI/UX Design
+                            </span>
+                        </div>
+
+                        <!-- Hero Actions -->
+                        <div class="home__actions">
+                            <a href="#projects" class="btn btn--neon">
+                                <ion-icon name="navigate-outline"></ion-icon>
+                                <span>View My Projects</span>
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                            <a href="#contact" class="btn btn--outline">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <span>Contact Me</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Showcase -->
+                    <div class="home__visual">
+                        <!-- Neon Green Circular Halo Glow -->
+                        <div class="visual__halo" aria-hidden="true"></div>
+
+                        <!-- 1. Floating Terminal Window (Top-Left) -->
+                        <div class="terminal__window" id="terminal-window">
+                            <div class="terminal__topbar">
+                                <div class="terminal__dots" aria-hidden="true">
+                                    <span class="t-dot t-dot--red"></span>
+                                    <span class="t-dot t-dot--yellow"></span>
+                                    <span class="t-dot t-dot--green"></span>
+                                </div>
+                                <span class="terminal__title">~/portfolio</span>
+                            </div>
+                            <div class="terminal__content">
+                                <p class="term-line"><span class="term-arrow">&gt;</span> Turning ideas into code...</p>
+                                <p class="term-line"><span class="term-arrow">&gt;</span> Learning everyday...</p>
+                                <p class="term-line"><span class="term-arrow">&gt;</span> Building for a better tomorrow.</p>
+                                <p class="term-line term-line--code">
+                                    <span class="term-arrow">&gt;</span> <span class="term-kw">const</span> mindset = <span class="term-str">"Keep Going"</span>;
+                                </p>
+                                <span class="terminal__cursor"></span>
+                            </div>
+                        </div>
+
+                        <!-- 2. Floating Sticky Note (Top-Right) -->
+                        <div class="sticky__note" aria-hidden="true">
+                            <div class="sticky__pin">📌</div>
+                            <ul class="sticky__list">
+                                <li>Code</li>
+                                <li>Create</li>
+                                <li>Learn</li>
+                                <li>Improve</li>
+                                <li>Repeat...</li>
+                            </ul>
+                        </div>
+
+                        <!-- 3. Vertical Tech Stack Dock (Far Right) -->
+                        <div class="tech__dock" aria-label="Tech Stack Tools">
+                            <div class="dock__item" title="HTML5" data-tech="HTML5">
+                                <ion-icon name="logo-html5" class="tech-icon tech-icon--html"></ion-icon>
+                            </div>
+                            <div class="dock__item" title="CSS3" data-tech="CSS3">
+                                <ion-icon name="logo-css3" class="tech-icon tech-icon--css"></ion-icon>
+                            </div>
+                            <div class="dock__item" title="JavaScript" data-tech="JavaScript">
+                                <ion-icon name="logo-javascript" class="tech-icon tech-icon--js"></ion-icon>
+                            </div>
+                            <div class="dock__item" title="Git" data-tech="Git">
+                                <ion-icon name="git-branch-outline" class="tech-icon tech-icon--git"></ion-icon>
+                            </div>
+                            <div class="dock__item" title="GitHub" data-tech="GitHub">
+                                <ion-icon name="logo-github" class="tech-icon tech-icon--gh"></ion-icon>
+                            </div>
+                            <div class="dock__item" title="VS Code" data-tech="VS Code">
+                                <ion-icon name="code-slash-outline" class="tech-icon tech-icon--vsc"></ion-icon>
+                            </div>
+                        </div>
+
+                        <!-- 4. Currently Learning Floating Card (Bottom-Right) -->
+                        <div class="learning__card">
+                            <div class="learning__card-header">
+                                <span class="pulse-dot"></span>
+                                <span class="learning__card-title">Currently Learning:</span>
+                            </div>
+                            <ul class="learning__card-list">
+                                <li><span class="term-arrow">&gt;</span> JavaScript Core &amp; DOM</li>
+                                <li><span class="term-arrow">&gt;</span> Modern Responsive Web</li>
+                                <li><span class="term-arrow">&gt;</span> Building Real Projects</li>
+                            </ul>
+                            <!-- Hand-drawn curved arrow -->
+                            <svg class="hand-arrow" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M8 32C22 36 44 28 48 10M48 10L40 12M48 10L50 18" stroke="#ccff00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+
+                        <!-- 5. Inspirational Quote -->
+                        <div class="hero__quote">
+                            &ldquo;Learning today,<br>to build a better tomorrow.&rdquo;
+                        </div>
+                    </div>
+
+                    <!-- Bottom Stats Strip (Spanning Across Hero) -->
+                    <div class="home__stats-bar">
+                        <div class="stat__column">
+                            <div class="stat__icon-box">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </div>
+                            <div class="stat__text">
+                                <span class="stat__value">2nd Year</span>
+                                <span class="stat__label">B.Tech Student</span>
+                            </div>
+                        </div>
+
+                        <div class="stat__divider"></div>
+
+                        <div class="stat__column">
+                            <div class="stat__icon-box">
+                                <ion-icon name="business-outline"></ion-icon>
+                            </div>
+                            <div class="stat__text">
+                                <span class="stat__value">SVIET</span>
+                                <span class="stat__label">Chandigarh</span>
+                            </div>
+                        </div>
+
+                        <div class="stat__divider"></div>
+
+                        <div class="stat__column">
+                            <div class="stat__icon-box">
+                                <ion-icon name="code-slash-outline"></ion-icon>
+                            </div>
+                            <div class="stat__text">
+                                <span class="stat__value">HTML &amp; CSS</span>
+                                <span class="stat__label">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="stat__divider"></div>
+
+                        <div class="stat__column">
+                            <div class="stat__icon-box">
+                                <ion-icon name="rocket-outline"></ion-icon>
+                            </div>
+                            <div class="stat__text">
+                                <span class="stat__value">Full-Stack</span>
+                                <span class="stat__label">Aspiring Developer</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="home__img">
-                    <img src="assets/img/img.jpg" alt="">
+                <!-- Centered Scroll Down Indicator -->
+                <a href="#about" class="home__scrolldown" aria-label="Scroll to About section">
+                    <span class="scrolldown__mouse">
+                        <span class="scrolldown__wheel"></span>
+                    </span>
+                    <span class="scrolldown__text">SCROLL DOWN</span>
+                    <ion-icon name="chevron-down-outline" class="scrolldown__chevron"></ion-icon>
+                </a>
+
+                <!-- Mountain Terrain Landscape Silhouette at Base -->
+                <div class="home__landscape" aria-hidden="true">
+                    <svg viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 90L60 72C120 54 240 18 360 22C480 26 600 70 720 74C840 78 960 40 1080 28C1200 16 1320 32 1380 40L1440 48V90H0Z" fill="#040605"/>
+                        <path d="M0 90L60 72C120 54 240 18 360 22C480 26 600 70 720 74C840 78 960 40 1080 28C1200 16 1320 32 1380 40L1440 48" stroke="rgba(204, 255, 0, 0.4)" stroke-width="2"/>
+                    </svg>
                 </div>
-                
-                <div class="home__social">
-                    <ion-icon name="logo-facebook" class="home__social-icon"></ion-icon>
-                    <ion-icon name="logo-instagram" class="home__social-icon"></ion-icon>
-                    <ion-icon name="logo-twitter" class="home__social-icon"></ion-icon>
+            </section>
+
+            <!-- ===== 02 / ABOUT ME SECTION ===== -->
+            <section class="about section bd-grid" id="about">
+                <!-- Top Cyber Header Bar -->
+                <!-- <div class="section__topbar">
+                    <div class="section__topbar-left">
+                        <span class="section__topbar-num">/ 02 /</span>
+                        <span class="section__topbar-name">ABOUT</span>
+                        <span class="section__topbar-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="section__topbar-right">
+                        <span class="section__topbar-slogan">GET TO KNOW ME</span>
+                        <span class="accent-slashes" aria-hidden="true">///</span>
+                    </div>
+                </div> -->
+
+                <div class="category__pill">
+                    <span class="pill-dot"></span>
+                    <span>DISCOVER MY JOURNEY</span>
                 </div>
 
-            </div>
+                <h2 class="about__main-title">
+                    About <span class="text-accent">Me</span>
+                </h2>
+
+                <div class="about__cyber-grid">
+                    <!-- COLUMN 1: Cyber Framed Photo & 2x2 Mini Stats -->
+                    <div class="about__col-portrait">
+                        <!-- Cyber Bracketed Photo Card -->
+                        <div class="cyber__portrait-card">
+                            <!-- HUD Corner Brackets -->
+                            <div class="hud-bracket hud-bracket--tl"></div>
+                            <div class="hud-bracket hud-bracket--tr"></div>
+                            <div class="hud-bracket hud-bracket--bl"></div>
+                            <div class="hud-bracket hud-bracket--br"></div>
+
+                            <div class="cyber__img-box">
+                                <img src="assets/img/about_priya.jpg" alt="Priya Kumari - Aspiring Full-Stack Developer" class="cyber__img" loading="lazy">
+                                
+                                <!-- Floating Status Pill -->
+                                <div class="cyber__img-badge">
+                                    <div class="img-badge__top">
+                                        <span class="badge-dot badge-dot--green"></span>
+                                        <span class="badge-dot badge-dot--yellow"></span>
+                                        <span class="badge-title">B.TECH STUDENT</span>
+                                    </div>
+                                    <div class="img-badge__sub">// LEARNING . BUILDING . GROWING</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2x2 Mini Stats Card -->
+                        <div class="about__mini-stats">
+                            <div class="mini-stat">
+                                <ion-icon name="book-outline" class="mini-stat__icon"></ion-icon>
+                                <div>
+                                    <h4 class="mini-stat__title">2nd Year</h4>
+                                    <span class="mini-stat__sub">B.Tech Student</span>
+                                </div>
+                            </div>
+
+                            <div class="mini-stat">
+                                <ion-icon name="business-outline" class="mini-stat__icon"></ion-icon>
+                                <div>
+                                    <h4 class="mini-stat__title">SVIET</h4>
+                                    <span class="mini-stat__sub">Chandigarh</span>
+                                </div>
+                            </div>
+
+                            <div class="mini-stat">
+                                <ion-icon name="people-outline" class="mini-stat__icon"></ion-icon>
+                                <div>
+                                    <h4 class="mini-stat__title">Curious</h4>
+                                    <span class="mini-stat__sub">Quick Learner</span>
+                                </div>
+                            </div>
+
+                            <div class="mini-stat">
+                                <ion-icon name="code-slash-outline" class="mini-stat__icon"></ion-icon>
+                                <div>
+                                    <h4 class="mini-stat__title">Passionate</h4>
+                                    <span class="mini-stat__sub">About Web Dev</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COLUMN 2: Center Bio & Story -->
+                    <div class="about__col-bio">
+                        <h3 class="about__salutation">
+                            Hey, I'm <span class="text-lime">Priya</span> <span class="wave-hand">👋</span>
+                        </h3>
+
+                        <div class="about__text-content">
+                            <p>
+                                I'm a <span class="text-lime">B.Tech student</span> at <span class="text-white">SVIET, Chandigarh</span>, currently in my 2nd year. I love turning ideas into real projects through code and design. My main focus is on <span class="text-lime">HTML</span>, <span class="text-lime">CSS</span>, and <span class="text-lime">JavaScript</span>, and I enjoy exploring new technologies to build useful and creative solutions.
+                            </p>
+                            <p>
+                                I'm dedicated to learning web technologies step by step, practicing daily, and collaborating with peers and mentors. I'm passionate about creating projects that solve real problems and provide value to users.
+                            </p>
+                            <p>
+                                Apart from coding, I enjoy <span class="text-lime">UI/UX design</span>, editing with <span class="text-lime">Photoshop and Canva</span>, and exploring creative web designs. I believe in <span class="text-lime">continuous learning</span>, <span class="text-lime">consistent practice</span>, and <span class="text-lime">building something meaningful</span> step by step.
+                            </p>
+                        </div>
+
+                        <!-- Quote Box with Left Accent Bar -->
+                        <div class="about__quote-box">
+                            <span class="quote-bar"></span>
+                            <blockquote class="about__quote-text">
+                                &ldquo; Learning today,<br>
+                                to <span class="text-lime">build a better tomorrow.</span> &rdquo;
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- COLUMN 3: Right Stacked Cards (Current Focus, Goals, Interests) -->
+                    <div class="about__col-cards">
+                        <!-- Card 1: Current Focus -->
+                        <div class="info__card">
+                            <div class="info__card-header">
+                                <ion-icon name="locate-outline" class="info__card-icon"></ion-icon>
+                                <span class="info__card-title">CURRENT FOCUS</span>
+                            </div>
+                            <ul class="info__card-list">
+                                <li>HTML5 &amp; Semantic Web</li>
+                                <li>Modern CSS &amp; Responsive UI</li>
+                                <li>JavaScript Core &amp; DOM</li>
+                                <li>Building Real Projects</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 2: Goals -->
+                        <div class="info__card">
+                            <div class="info__card-header">
+                                <ion-icon name="rocket-outline" class="info__card-icon"></ion-icon>
+                                <span class="info__card-title">GOALS</span>
+                            </div>
+                            <ul class="info__card-list">
+                                <li>Become a skilled developer</li>
+                                <li>Work on impactful projects</li>
+                                <li>Contribute to open web</li>
+                                <li>Get an internship opportunity</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card 3: Interests -->
+                        <div class="info__card">
+                            <div class="info__card-header">
+                                <ion-icon name="game-controller-outline" class="info__card-icon"></ion-icon>
+                                <span class="info__card-title">INTERESTS</span>
+                            </div>
+                            <ul class="info__card-list">
+                                <li>Coding &amp; Problem Solving</li>
+                                <li>UI/UX &amp; Creative Design</li>
+                                <li>Tech Communities &amp; Events</li>
+                                <li>Exploring New Technologies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOTTOM ACTIONS ROW -->
+                <div class="about__bottom-actions">
+                    <a href="#contact" class="action__card">
+                        <div class="action__card-left">
+                            <ion-icon name="download-outline"></ion-icon>
+                            <span>Download Resume</span>
+                        </div>
+                        <ion-icon name="arrow-forward-outline" class="action__card-arrow"></ion-icon>
+                    </a>
+
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="action__card">
+                        <div class="action__card-left">
+                            <ion-icon name="logo-github"></ion-icon>
+                            <span>View GitHub</span>
+                        </div>
+                        <ion-icon name="arrow-forward-outline" class="action__card-arrow"></ion-icon>
+                    </a>
+
+                    <a href="mailto:ranapriya3241@gmail.com" class="action__card">
+                        <div class="action__card-left">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>Connect via Email</span>
+                        </div>
+                        <ion-icon name="arrow-forward-outline" class="action__card-arrow"></ion-icon>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ===== 03 / TECHNICAL SKILLS ===== -->
+            <section class="skills section" id="skills">
+                <div class="skills__wrapper bd-grid">
+                    <!-- Top Bar -->
+                    <!-- <div class="section__topbar">
+                        <div class="section__topbar-left">
+                            <span class="section__topbar-num">/ 03 /</span>
+                            <span class="section__topbar-name">SKILLS</span>
+                            <span class="section__topbar-line" aria-hidden="true"></span>
+                        </div>
+                        <div class="section__topbar-right">
+                            <span class="section__topbar-slogan">TOOLS THAT TURN IDEAS INTO REALITY</span>
+                            <span class="accent-slashes" aria-hidden="true">///</span>
+                        </div>
+                    </div> -->
+
+                    <!-- Skills Header: Left Title & Right Code Box -->
+                    <div class="skills__header-row">
+                        <div class="skills__intro">
+                            <div class="category__pill">
+                                <span class="pill-dot"></span>
+                                <span>MY LEARNING STACK</span>
+                            </div>
+
+                            <h2 class="skills__main-title">
+                                Skills &amp; <span class="text-accent">Tools</span>
+                            </h2>
+
+                            <p class="skills__main-desc">
+                                A collection of technologies, tools, and creative skills I use to build real-world projects and bring ideas to life.
+                            </p>
+                        </div>
+
+                        <!-- Right: Light Code Window + Handwritten Note -->
+                        <div class="skills__code-card-wrap">
+                            <div class="skills__code-card">
+                                <div class="code-card__topbar">
+                                    <span class="dot dot--red"></span>
+                                    <span class="dot dot--yellow"></span>
+                                    <span class="dot dot--green"></span>
+                                </div>
+                                <pre class="skills__code-pre"><code><span class="code-kw">const</span> <span class="code-var">skills</span> = [
+  <span class="code-str">"Learn"</span>, <span class="code-str">"Build"</span>, <span class="code-str">"Improve"</span>, <span class="code-str">"Repeat"</span>
+];</code></pre>
+                            </div>
+
+                            <!-- Handwritten Note with Curved Arrow -->
+                            <div class="skills__handwritten-note">
+                                <svg class="handwritten-arrow" viewBox="0 0 70 45" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M6 38 C 25 42, 52 28, 58 10 M 58 10 L 48 10 M 58 10 L 58 20" stroke="var(--first-color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span class="handwritten-text">Constantly<br>learning,<br>always building.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 Cards Grid (Using Authentic Stack) -->
+                    <div class="skills__cards-grid">
+                        <!-- 01: Web Development -->
+                        <div class="skill-category-card">
+                            <div class="category-card__header">
+                                <div class="category-card__badge-wrap">
+                                    <span class="category-num">01</span>
+                                    <div class="category-icon-box">
+                                        <ion-icon name="code-slash-outline"></ion-icon>
+                                    </div>
+                                    <div>
+                                        <h3 class="category-title">Web Development</h3>
+                                        <p class="category-subtitle">Core Web Technologies</p>
+                                    </div>
+                                </div>
+                                <span class="category-arrow" aria-hidden="true">&#x2197;</span>
+                            </div>
+
+                            <!-- Tool Badges Row -->
+                            <div class="category-tools-row">
+                                <div class="tool-badge" title="HTML5">
+                                    <i class="devicon-html5-plain colored"></i>
+                                    <span class="tool-name">HTML5</span>
+                                </div>
+                                <div class="tool-badge" title="CSS3">
+                                    <i class="devicon-css3-plain colored"></i>
+                                    <span class="tool-name">CSS3</span>
+                                </div>
+                                <div class="tool-badge" title="JavaScript">
+                                    <i class="devicon-javascript-plain colored"></i>
+                                    <span class="tool-name">JavaScript</span>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Skills & Progress Indicators -->
+                            <div class="skills__list">
+                                <div class="skills__item">
+                                    <div class="skills__item-info">
+                                        <span class="skills__name">HTML</span>
+                                        <span class="skills__status-pill skills__status-pill--completed">Completed &#10003;</span>
+                                    </div>
+                                    <div class="skills__bar"><span class="skills__bar-fill" style="width: 100%;"></span></div>
+                                </div>
+
+                                <div class="skills__item">
+                                    <div class="skills__item-info">
+                                        <span class="skills__name">CSS</span>
+                                        <span class="skills__status-pill skills__status-pill--completed">Completed &#10003;</span>
+                                    </div>
+                                    <div class="skills__bar"><span class="skills__bar-fill" style="width: 100%;"></span></div>
+                                </div>
+
+                                <div class="skills__item">
+                                    <div class="skills__item-info">
+                                        <span class="skills__name">JavaScript</span>
+                                        <span class="skills__status-pill skills__status-pill--learning">Currently Learning &#9889;</span>
+                                    </div>
+                                    <div class="skills__bar"><span class="skills__bar-fill skills__bar-fill--learning" style="width: 45%;"></span></div>
+                                </div>
+                            </div>
+
+                            <!-- Concept Tags -->
+                            <div class="skills__tags">
+                                <span class="skills__tag">Semantic HTML</span>
+                                <span class="skills__tag">Responsive CSS</span>
+                                <span class="skills__tag">DOM &amp; Logic</span>
+                            </div>
+                        </div>
+
+                        <!-- 02: Development Tools -->
+                        <div class="skill-category-card">
+                            <div class="category-card__header">
+                                <div class="category-card__badge-wrap">
+                                    <span class="category-num">02</span>
+                                    <div class="category-icon-box">
+                                        <ion-icon name="construct-outline"></ion-icon>
+                                    </div>
+                                    <div>
+                                        <h3 class="category-title">Development Tools</h3>
+                                        <p class="category-subtitle">Coding &amp; Version Control</p>
+                                    </div>
+                                </div>
+                                <span class="category-arrow" aria-hidden="true">&#x2197;</span>
+                            </div>
+
+                            <!-- Tool Badges Row -->
+                            <div class="category-tools-row">
+                                <div class="tool-badge" title="Visual Studio Code">
+                                    <i class="devicon-vscode-plain colored"></i>
+                                    <span class="tool-name">VS Code</span>
+                                </div>
+                                <div class="tool-badge" title="Git">
+                                    <i class="devicon-git-plain colored"></i>
+                                    <span class="tool-name">Git</span>
+                                </div>
+                                <div class="tool-badge" title="GitHub">
+                                    <i class="devicon-github-original colored"></i>
+                                    <span class="tool-name">GitHub</span>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Skills & Progress Indicators -->
+                            <div class="skills__list">
+                                <div class="skills__item">
+                                    <div class="skills__item-info">
+                                        <span class="skills__name">Visual Studio Code</span>
+                                        <span class="skills__status-pill skills__status-pill--tool">Primary Code Editor</span>
+                                    </div>
+                                    <div class="skills__bar"><span class="skills__bar-fill" style="width: 100%;"></span></div>
+                                </div>
+
+                                <div class="skills__item">
+                                    <div class="skills__item-info">
+                                        <span class="skills__name">Git</span>
+                                        <span class="skills__status-pill skills__status-pill--tool">Version Control</span>
+                                    </div>
+                                    <div class="skills__bar"><span class="skills__bar-fill" style="width: 100%;"></span></div>
+                                </div>
+
+                                <div class="skills__item">
+                                    <div class="skills__item-info">
+                                        <span class="skills__name">GitHub</span>
+                                        <span class="skills__status-pill skills__status-pill--tool">Code Hosting &amp; Repos</span>
+                                    </div>
+                                    <div class="skills__bar"><span class="skills__bar-fill" style="width: 100%;"></span></div>
+                                </div>
+                            </div>
+
+                            <!-- Concept Tags -->
+                            <div class="skills__tags">
+                                <span class="skills__tag">VS Code Extensions</span>
+                                <span class="skills__tag">Git Commits</span>
+                                <span class="skills__tag">Repository Management</span>
+                            </div>
+                        </div>
+
+                        <!-- 03: Design Tools -->
+                        <div class="skill-category-card">
+                            <div class="category-card__header">
+                                <div class="category-card__badge-wrap">
+                                    <span class="category-num">03</span>
+                                    <div class="category-icon-box">
+                                        <ion-icon name="color-palette-outline"></ion-icon>
+                                    </div>
+                                    <div>
+                                        <h3 class="category-title">Design Tools</h3>
+                                        <p class="category-subtitle">Visual Assets &amp; Creatives</p>
+                                    </div>
+                                </div>
+                                <span class="category-arrow" aria-hidden="true">&#x2197;</span>
+                            </div>
+
+                            <!-- Tool Badges Row -->
+                            <div class="category-tools-row">
+                                <div class="tool-badge" title="Canva">
+                                    <i class="devicon-canva-original colored"></i>
+                                    <span class="tool-name">Canva</span>
+                                </div>
+                                <div class="tool-badge" title="Adobe Photoshop">
+                                    <i class="devicon-photoshop-plain colored"></i>
+                                    <span class="tool-name">Photoshop</span>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Skills & Progress Indicators -->
+                            <div class="skills__list">
+                                <div class="skills__item">
+                                    <div class="skills__item-info">
+                                        <span class="skills__name">Canva</span>
+                                        <span class="skills__status-pill skills__status-pill--tool">Layouts &amp; Banners</span>
+                                    </div>
+                                    <div class="skills__bar"><span class="skills__bar-fill" style="width: 100%;"></span></div>
+                                </div>
+
+                                <div class="skills__item">
+                                    <div class="skills__item-info">
+                                        <span class="skills__name">Adobe Photoshop</span>
+                                        <span class="skills__status-pill skills__status-pill--tool">Image &amp; Graphic Editing</span>
+                                    </div>
+                                    <div class="skills__bar"><span class="skills__bar-fill" style="width: 100%;"></span></div>
+                                </div>
+                            </div>
+
+                            <!-- Concept Tags -->
+                            <div class="skills__tags">
+                                <span class="skills__tag">Graphic Design</span>
+                                <span class="skills__tag">Visual Presentation</span>
+                                <span class="skills__tag">Color Aesthetics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom 3-Column Focus Bar -->
+                    <div class="skills__focus-strip">
+                        <div class="focus-strip__col">
+                            <div class="focus-strip__icon">
+                                <ion-icon name="locate-outline"></ion-icon>
+                            </div>
+                            <div class="focus-strip__text">
+                                <span class="focus-strip__label">MY FOCUS</span>
+                                <h4 class="focus-strip__heading">Build practical skills and <span class="text-accent">real-world projects</span>.</h4>
+                            </div>
+                        </div>
+
+                        <div class="focus-strip__divider" aria-hidden="true"></div>
+
+                        <div class="focus-strip__col">
+                            <div class="focus-strip__icon">
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </div>
+                            <div class="focus-strip__text">
+                                <span class="focus-strip__label">MY APPROACH</span>
+                                <h4 class="focus-strip__heading">Learn consistently, practice regularly, <span class="text-accent">improve step by step</span>.</h4>
+                            </div>
+                        </div>
+
+                        <div class="focus-strip__divider" aria-hidden="true"></div>
+
+                        <div class="focus-strip__col">
+                            <div class="focus-strip__icon">
+                                <ion-icon name="rocket-outline"></ion-icon>
+                            </div>
+                            <div class="focus-strip__text">
+                                <span class="focus-strip__label">MY GOAL</span>
+                                <h4 class="focus-strip__heading">Become a skilled developer and create <span class="text-accent">impactful solutions</span>.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 04 / PROJECTS ===== -->
+            <section class="projects section bd-grid" id="projects">
+                <!-- Top Cyber Header Bar -->
+                <!-- <div class="section__topbar">
+                    <div class="section__topbar-left">
+                        <span class="section__topbar-num">/ 04 /</span>
+                        <span class="section__topbar-name">PROJECTS</span>
+                        <span class="section__topbar-line" aria-hidden="true"></span>
+                    </div>
+                    <div class="section__topbar-right">
+                        <span class="section__topbar-slogan">FEATURED WORKS & EXPERIMENTS</span>
+                        <span class="accent-slashes" aria-hidden="true">///</span>
+                    </div>
+                </div> -->
+
+                <div class="category__pill">
+                    <span class="pill-dot"></span>
+                    <span>PORTFOLIO SHOWCASE</span>
+                </div>
+
+                <h2 class="section__title">
+                    My <span class="text-accent">Projects</span>
+                </h2>
+
+                <div class="projects__empty-state">
+                    <div class="empty-state__icon-box">
+                        <ion-icon name="rocket-outline" class="empty-state__icon"></ion-icon>
+                    </div>
+
+                    <span class="empty-state__badge">Under Construction</span>
+                    <h3 class="empty-state__title">Projects Coming Soon</h3>
+                    
+                    <p class="empty-state__description">
+                        I'm currently learning and strengthening my development skills. As I continue my journey, I'll be adding projects that showcase my creativity, knowledge, and progress.
+                    </p>
+
+                    <div class="empty-state__milestones">
+                        <div class="empty-state__milestone">
+                            <div class="milestone__dot milestone__dot--completed"></div>
+                            <div class="milestone__content">
+                                <span class="milestone__title">Phase 1 &bull; HTML & CSS</span>
+                                <span class="milestone__status">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="empty-state__divider"></div>
+
+                        <div class="empty-state__milestone">
+                            <div class="milestone__dot milestone__dot--active"></div>
+                            <div class="milestone__content">
+                                <span class="milestone__title">Phase 2 &bull; JavaScript Projects</span>
+                                <span class="milestone__status">In Progress</span>
+                            </div>
+                        </div>
+
+                        <div class="empty-state__divider"></div>
+
+                        <div class="empty-state__milestone">
+                            <div class="milestone__dot"></div>
+                            <div class="milestone__content">
+                                <span class="milestone__title">Phase 3 &bull; Full-Stack Apps</span>
+                                <span class="milestone__status">Upcoming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="empty-state__action">
+                        <a href="#skills" class="button">
+                            <span>View Current Skills</span>
+                            <ion-icon name="sparkles-outline"></ion-icon>
+                        </a>
+                        <a href="#contact" class="button-outline">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <span>Connect With Me</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 05 / CONTACT ===== -->
+            <section class="contact section" id="contact">
+                <div class="contact__wrapper bd-grid">
+                    <!-- Top Bar -->
+                    <!-- <div class="section__topbar">
+                        <div class="section__topbar-left">
+                            <span class="section__topbar-num">/ 05 /</span>
+                            <span class="section__topbar-name">CONTACT</span>
+                            <span class="section__topbar-line" aria-hidden="true"></span>
+                        </div>
+                        <div class="section__topbar-right">
+                            <span class="section__topbar-slogan">LET'S BUILD SOMETHING GREAT</span>
+                            <span class="accent-slashes" aria-hidden="true">///</span>
+                        </div>
+                    </div> -->
+
+                    <!-- Main 3-Column Grid -->
+                    <div class="contact__grid">
+                        <!-- Column 1: Left Intro & Features -->
+                        <div class="contact__col contact__col--intro">
+                            <div class="contact__tagline">
+                                <span class="cyber-accent-bar" aria-hidden="true">|</span>
+                                <span class="contact__tagline-text">GET IN TOUCH</span>
+                                <span class="contact__tagline-line" aria-hidden="true"></span>
+                            </div>
+
+                            <h2 class="contact__hero-title">
+                                <span class="hero-title-light">Let's</span><br>
+                                <span class="hero-title-accent">Connect</span>
+                            </h2>
+
+                            <p class="contact__hero-text">
+                                I'm always open to new opportunities, collaborations, and interesting conversations. Whether you have a project idea, want to discuss tech, or just want to say hi — feel free to <a href="#contact-form" class="contact__reachout-link">reach out!</a>
+                            </p>
+
+                            <!-- Feature Items -->
+                            <div class="contact__features">
+                                <div class="contact__feature-card">
+                                    <div class="contact__feature-icon">
+                                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                                    </div>
+                                    <div class="contact__feature-body">
+                                        <h3 class="contact__feature-title">Open to Opportunities</h3>
+                                        <p class="contact__feature-desc">Internships, Projects, Collaborations</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact__feature-card">
+                                    <div class="contact__feature-icon">
+                                        <ion-icon name="people-outline"></ion-icon>
+                                    </div>
+                                    <div class="contact__feature-body">
+                                        <h3 class="contact__feature-title">Let's Collaborate</h3>
+                                        <p class="contact__feature-desc">Open source, Hackathons, Tech Events</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact__feature-card">
+                                    <div class="contact__feature-icon">
+                                        <ion-icon name="mail-outline"></ion-icon>
+                                    </div>
+                                    <div class="contact__feature-body">
+                                        <h3 class="contact__feature-title">Quick Response</h3>
+                                        <p class="contact__feature-desc">I usually reply within 24 hours</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2: Center Cyber Form Card -->
+                        <div class="contact__col contact__col--form">
+                            <div class="cyber-card cyber-card--brackets">
+                                <!-- Cyber Corner Brackets -->
+                                <span class="cyber-bracket cyber-bracket--tl" aria-hidden="true"></span>
+                                <span class="cyber-bracket cyber-bracket--tr" aria-hidden="true"></span>
+                                <span class="cyber-bracket cyber-bracket--bl" aria-hidden="true"></span>
+                                <span class="cyber-bracket cyber-bracket--br" aria-hidden="true"></span>
+
+                                <!-- Card Header -->
+                                <div class="cyber-card__header">
+                                    <div class="cyber-card__badge-icon">
+                                        <ion-icon name="mail-outline"></ion-icon>
+                                    </div>
+                                    <h3 class="cyber-card__title">Send Me a Message</h3>
+                                    <p class="cyber-card__subtitle">Fill out the form below and I'll get back to you soon.</p>
+                                </div>
+
+                                <!-- Form -->
+                                <form class="cyber-form" id="contact-form" novalidate>
+                                    <div class="cyber-form__group">
+                                        <label for="name" class="cyber-form__label">
+                                            Name
+                                        </label>
+                                        <div class="cyber-form__input-wrap">
+                                            <ion-icon name="person-outline" class="input-icon"></ion-icon>
+                                            <input type="text" id="name" name="name" class="cyber-form__input" placeholder="Your Name" required autocomplete="name">
+                                            <span class="required-star" aria-hidden="true">*</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cyber-form__group">
+                                        <label for="email" class="cyber-form__label">
+                                            Email
+                                        </label>
+                                        <div class="cyber-form__input-wrap">
+                                            <ion-icon name="mail-outline" class="input-icon"></ion-icon>
+                                            <input type="email" id="email" name="email" class="cyber-form__input" placeholder="your@email.com" required autocomplete="email">
+                                            <span class="required-star" aria-hidden="true">*</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="cyber-form__group">
+                                        <label for="subject" class="cyber-form__label">
+                                            Subject
+                                        </label>
+                                        <div class="cyber-form__input-wrap">
+                                            <ion-icon name="document-text-outline" class="input-icon"></ion-icon>
+                                            <input type="text" id="subject" name="subject" class="cyber-form__input" placeholder="What's this about?">
+                                        </div>
+                                    </div>
+
+                                    <div class="cyber-form__group">
+                                        <label for="message" class="cyber-form__label">
+                                            Message
+                                        </label>
+                                        <div class="cyber-form__input-wrap cyber-form__input-wrap--textarea">
+                                            <ion-icon name="chatbox-outline" class="input-icon textarea-icon"></ion-icon>
+                                            <textarea id="message" name="message" class="cyber-form__textarea" rows="4" placeholder="Write your message here..." required></textarea>
+                                            <span class="required-star required-star--textarea" aria-hidden="true">*</span>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="cyber-form__submit-btn" id="contact-submit">
+                                        <ion-icon name="paper-plane" class="btn-icon"></ion-icon>
+                                        <span>Send Message</span>
+                                        <ion-icon name="arrow-forward-outline" class="btn-arrow"></ion-icon>
+                                    </button>
+
+                                    <div class="cyber-form__alert" id="form-alert" role="alert" aria-live="polite"></div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Column 3: Right Stacked Cards -->
+                        <div class="contact__col contact__col--side">
+                            <!-- Card 1: Contact Information -->
+                            <div class="side-card side-card--info">
+                                <div class="side-card__header">
+                                    <span class="side-card__prefix">&gt;_</span>
+                                    <h3 class="side-card__title">Contact Information</h3>
+                                    <span class="side-card__line" aria-hidden="true"></span>
+                                </div>
+
+                                <div class="info-list">
+                                    <div class="info-item">
+                                        <div class="info-item__icon">
+                                            <ion-icon name="mail-outline"></ion-icon>
+                                        </div>
+                                        <div class="info-item__content">
+                                            <span class="info-item__label">Email</span>
+                                            <a href="mailto:ranapriya3241@gmail.com" class="info-item__value" id="val-email">ranapriya3241@gmail.com</a>
+                                        </div>
+                                        <button type="button" class="info-item__copy-btn" data-copy="ranapriya3241@gmail.com" aria-label="Copy Email address" title="Copy to clipboard">
+                                            <ion-icon name="copy-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <div class="info-item__icon">
+                                            <ion-icon name="call-outline"></ion-icon>
+                                        </div>
+                                        <div class="info-item__content">
+                                            <span class="info-item__label">Phone</span>
+                                            <a href="tel:9142821188" class="info-item__value" id="val-phone">9142821188</a>
+                                        </div>
+                                        <button type="button" class="info-item__copy-btn" data-copy="9142821188" aria-label="Copy Phone number" title="Copy to clipboard">
+                                            <ion-icon name="copy-outline"></ion-icon>
+                                        </button>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <div class="info-item__icon">
+                                            <ion-icon name="location-outline"></ion-icon>
+                                        </div>
+                                        <div class="info-item__content">
+                                            <span class="info-item__label">Location</span>
+                                            <span class="info-item__value" id="val-location">Koderma, Jharkhand, India</span>
+                                        </div>
+                                        <button type="button" class="info-item__copy-btn" data-copy="Koderma, Jharkhand, India" aria-label="Copy Location" title="Copy to clipboard">
+                                            <ion-icon name="copy-outline"></ion-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Connect with Me -->
+                            <div class="side-card side-card--socials">
+                                <div class="side-card__header">
+                                    <ion-icon name="people-outline" class="side-card__icon-accent"></ion-icon>
+                                    <h3 class="side-card__title">Connect with Me</h3>
+                                    <span class="side-card__line" aria-hidden="true"></span>
+                                </div>
+
+                                <p class="side-card__desc">Find me on these platforms for more updates and collaboration opportunities.</p>
+
+                                <div class="social-tiles">
+                                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-tile" aria-label="GitHub profile">
+                                        <div class="social-tile__box social-tile__box--github">
+                                            <ion-icon name="logo-github"></ion-icon>
+                                        </div>
+                                        <span class="social-tile__name">GitHub</span>
+                                    </a>
+
+                                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-tile" aria-label="LinkedIn profile">
+                                        <div class="social-tile__box social-tile__box--linkedin">
+                                            <ion-icon name="logo-linkedin"></ion-icon>
+                                        </div>
+                                        <span class="social-tile__name">LinkedIn</span>
+                                    </a>
+
+                                    <a href="mailto:ranapriya3241@gmail.com" class="social-tile" aria-label="Send Email">
+                                        <div class="social-tile__box social-tile__box--email">
+                                            <ion-icon name="mail"></ion-icon>
+                                        </div>
+                                        <span class="social-tile__name">Email</span>
+                                    </a>
+
+                                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-tile" aria-label="Instagram profile">
+                                        <div class="social-tile__box social-tile__box--instagram">
+                                            <ion-icon name="logo-instagram"></ion-icon>
+                                        </div>
+                                        <span class="social-tile__name">Instagram</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Code Snippet Card -->
+                            <div class="side-card side-card--code">
+                                <div class="code-window__topbar">
+                                    <span class="window-dot window-dot--red"></span>
+                                    <span class="window-dot window-dot--yellow"></span>
+                                    <span class="window-dot window-dot--green"></span>
+                                </div>
+                                <div class="code-window__body">
+                                    <pre class="code-pre"><code><span class="code-line"><span class="code-ln">1</span><span class="code-comment">// Let's build something amazing</span></span>
+<span class="code-line"><span class="code-ln">2</span><span class="code-kw">const</span> <span class="code-fn">connect</span> = () =&gt; {</span>
+<span class="code-line"><span class="code-ln">3</span>  <span class="code-kw">return</span> <span class="code-str">"Always open\</span></span>
+<span class="code-line"><span class="code-ln">5</span>          <span class="code-str">to new opportunities!"</span>;</span>
+<span class="code-line"><span class="code-ln">4</span>}</span></code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Quote Strip -->
+                    <div class="contact__quote-strip">
+                        <span class="quote-line quote-line--left" aria-hidden="true"></span>
+                        <div class="contact__quote-body">
+                            <span class="quote-mark" aria-hidden="true">“</span>
+                            <span class="quote-text">Good ideas start with a conversation.</span>
+                            <span class="quote-mark" aria-hidden="true">”</span>
+                        </div>
+                        <span class="quote-line quote-line--right" aria-hidden="true"></span>
+                    </div>
+
+                    <!-- Cyber Ambient Dot Matrix Decors -->
+                    <div class="cyber-dots cyber-dots--bl" aria-hidden="true"></div>
+                    <div class="cyber-dots cyber-dots--br" aria-hidden="true"></div>
+                </div>
+            </section>
         </main>
 
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="footer__container bd-grid">
+                <div class="footer__top">
+                    <div>
+                        <a href="#home" class="footer__logo">Priya Kumari<span class="nav__logo-dot">.</span></a>
+                        <p class="footer__description">Second-year B.Tech student at SVIET, Chandigarh, and aspiring Full-Stack Developer.</p>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#projects" class="footer__link">Projects</a></li>
+                        <li><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__bottom">
+                    <p class="footer__copy">&copy; 2026 Priya Kumari. All rights reserved.</p>
+                    <a href="#home" class="footer__scroll-top" aria-label="Scroll back to top">
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
         <!-- GSAP -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js" defer></script>
 
         <!-- MAIN -->
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js" defer></script>
     
         <!-- ICONS -->
-        <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
